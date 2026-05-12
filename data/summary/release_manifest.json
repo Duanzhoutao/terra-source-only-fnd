@@ -1,0 +1,21 @@
+{
+  "package": "terra-source-only-fnd",
+  "protocol": "FND5-LOCKED-V1 strict source-only leave-one-domain-out",
+  "targets": [
+    "target_politifact",
+    "target_gossipcop",
+    "target_coaid",
+    "target_pmd",
+    "target_liar"
+  ],
+  "seeds": [
+    20260424,
+    20260425,
+    20260426
+  ],
+  "released_score_inputs": 15,
+  "raw_text_included": false,
+  "model_checkpoints_included": false,
+  "llm_raw_outputs_included": false,
+  "positive_class": "fake=1"
+}
