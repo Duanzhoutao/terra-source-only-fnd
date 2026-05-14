@@ -5,10 +5,9 @@ This repository contains the minimal reproducibility package for TERRA
 fake news detection method evaluated on the FND5-LOCKED-V1 leave-one-domain-out
 protocol.
 
-The repository is a private pre-release artifact until the paper is published.
-It is designed to make the core conclusion reproducible without distributing
-raw news text, model checkpoints, LLM raw outputs, or internal exploration
-materials.
+This public repository is designed to make the core conclusion reproducible
+without distributing raw news text, model checkpoints, LLM raw outputs, or
+internal exploration materials.
 
 ## What Is Included
 
@@ -22,11 +21,14 @@ materials.
   event-quality mask, and expert probabilities.
 - Representative baseline summary table used to rebuild the main comparison.
 - Verification script that checks the released package against expected values.
+- Model details and LLM processing details, including the released scoring
+  configuration, event-slot schema, fixed prompt template, parsing boundary,
+  and release boundary.
 
 ## What Is Not Included
 
 - Raw article, title, or statement text.
-- LLM prompts or raw LLM JSON outputs.
+- Raw LLM JSON outputs.
 - Model weights, checkpoints, Hugging Face caches, or training logs.
 - Internal project notes, paper drafts, temporary files, or exploratory route
   search code.
@@ -77,6 +79,8 @@ data/
   summary/                 # released manifests and representative baselines
 docs/
   DATA.md                  # data provenance and release boundaries
+  MODEL_DETAILS.md         # TERRA scoring rule and released configuration
+  LLM_PROCESSING.md        # LLM event-slot processing details
   REPRODUCIBILITY.md       # commands and expected outputs
 scripts/
   reproduce_terra.py       # recompute TERRA from score inputs
@@ -90,4 +94,3 @@ src/terra/
 ## Citation
 
 Citation metadata will be updated after publication.
-
